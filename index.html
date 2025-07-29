@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ООО "ЮНИКОМ" - Комплектация предприятий</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <audio id="cyberSound" src="https://assets.mixkit.co/active_storage/sfx/2577/2577-preview.mp3" preload="auto"></audio>
+</head>
+<body>
+    <header class="header" id="main">
+        <div class="container">
+            <div class="header__inner">
+                <a href="#main" class="logo">
+                    <img src="images/logo.jpg" alt="ЮНИКОМ">
+                    <div class="logo-progress"></div>
+                </a>
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li><a href="#about">О компании</a></li>
+                        <li><a href="#clients">Заказчики</a></li>
+                        <li><a href="#projects">Проекты</a></li>
+                        <li><a href="#catalog">Каталог</a></li>
+                        <li><a href="#geography">География</a></li>
+                        <li><a href="#partners">Партнеры</a></li>
+                        <li><a href="#social">Соц.проекты</a></li>
+                        <li><a href="#contacts">Контакты</a></li>
+                    </ul>
+                </nav>
+                <div class="burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero__content">
+                    <h1 class="hero__title">Вас с нами неминуемо ждет успех!</h1>
+                    <p class="hero__subtitle">Комплектация строительства, бюджетных учреждений и производственных площадок</p>
+                    <a href="#contacts" class="btn">Сделать запрос</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about section">
+        <div class="container">
+            <h2 class="section__title">О компании</h2>
+            
+            <!-- Основное описание -->
+            <div class="about__intro">
+                <p><strong>ООО Компания «Юником»</strong> — уникальная команда профессионалов, более 10 лет успешно растущая на рынке комплектации строительства, бюджетных учреждений и производственных площадок!</p>
+                
+                <div class="values-grid">
+                    <div class="value-card">
+                        <div class="value-icon">✓</div>
+                        <h3>Пунктуальность</h3>
+                        <p>Выполнение обещаний и договоренностей — самое ценное в сотрудничестве</p>
+                    </div>
+                    
+                    <div class="value-card">
+                        <div class="value-icon">☺</div>
+                        <h3>Доброжелательность</h3>
+                        <p>Создаем условия для комфортного сотрудничества</p>
+                    </div>
+                    
+                    <div class="value-card">
+                        <div class="value-icon">♥</div>
+                        <h3>Приверженность</h3>
+                        <p>Работаем в ритме нашего заказчика</p>
+                    </div>
+                    
+                    <div class="value-card">
+                        <div class="value-icon">↑</div>
+                        <h3>Развитие</h3>
+                        <p>Не боимся сложных задач и амбициозных целей</p>
+                    </div>
+                </div>
+
+                <div class="stats">
+                    <div class="stat__item">
+                        <span class="stat__number">10+</span>
+                        <span class="stat__text">лет на рынке</span>
+                    </div>
+                    <div class="stat__item">
+                        <span class="stat__number">700+</span>
+                        <span class="stat__text">контрактов с бюджетными учреждениями</span>
+                    </div>
+                    <div class="stat__item">
+                        <span class="stat__number">800+</span>
+                        <span class="stat__text">контрактов с добывающими предприятиями</span>
+                    </div>
+                    <div class="stat__item">
+                        <span class="stat__number">20+</span>
+                        <span class="stat__text">объектов и строительных площадок</span>
+                    </div>
+                </div>
+            </div>
+        </div>    
+        </section>
+
+        <section id="clients" class="clients section">
+            <div class="container">
+                <h2 class="section__title">Наши заказчики</h2>
+                <div class="tabs">
+                    <button class="tab__btn active" data-tab="budget">Бюджетные учреждения</button>
+                    <button class="tab__btn" data-tab="oilgas">Нефтегазодобывающие предприятия</button>
+                </div>
+                <div class="tab__content active" id="budget">
+                    <div class="client__content">
+                        <div class="client__text">
+                            <p>Одним из первых открытых направлений деятельности ООО Компания «Юником» стала комплектация бюджетных учреждений. За 10 лет работы данного направления компания смогла доказать свою эффективность и профессионализм в обеспечении потребностей различных организаций ХМАО, ЯНАО и других регионов РФ.</p>
+                            <p>Примеры реализованных проектов:</p>
+                            <ul>
+                                <li>Комплексный проект по поставке БПЛА для образования</li>
+                                <li>Оснащение трёх кабинетов для подготовки киберспортсменов</li>
+                                <li>Поставка VR-арены и трассы для гоночных дронов</li>
+                                <li>Комплектация центра подготовки по фиджитал спорту</li>
+                                <li>Поставка мобильных мультимедийных комплексов</li>
+                            </ul>
+                        </div>
+                        <div class="client__image">
+                            <img src="images/photo2.jpg" alt="Бюджетные учреждения">
+                        </div>
+                    </div>
+                </div>
+                <div class="tab__content" id="oilgas">
+                    <div class="client__content">
+                        <div class="client__text">
+                            <p>С 2016 года ООО Компания «Юником» осуществляет поставки широкого спектра товаров на предприятия нефтегазодобывающей промышленности. Индивидуальный подход и ответственность перед каждым партнером, гибкая ценовая политика и высокое качество поставляемых товаров.</p>
+                            <p>Мы предлагаем к поставке:</p>
+                            <ul>
+                                <li>Абразивы и аудиовизуальное оборудование</li>
+                                <li>Вентиляционное оборудование и материалы</li>
+                                <li>Грузоподъемное и газопламенное оборудование</li>
+                                <li>Запорно-регулирующая арматура</li>
+                                <li>Измерительное оборудование и инженерная сантехника</li>
+                                <li>И многое другое</li>
+                            </ul>
+                        </div>
+                        <div class="client__image">
+                            <img src="images/photo2.jpg" alt="Нефтегазодобывающие предприятия">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="projects section">
+            <div class="container">
+                <h2 class="section__title">Проекты</h2>
+                <div class="projects__grid">
+                    <div class="project__card">
+                        <h3>Комплектация образовательных учреждений</h3>
+                        <p>Поставка современного оборудования для школ и вузов</p>
+                        <button class="btn btn-details" 
+                                data-title="Комплектация образовательных учреждений">
+                            Подробнее
+                        </button>
+                    </div>
+                    <div class="project__card">
+                        <h3>Спортивные объекты</h3>
+                        <p>Оснащение спортивных школ и центров подготовки</p>
+                        <button class="btn btn-details" 
+                                data-title="Спортивные объекты">
+                            Подробнее
+                        </button>
+                    </div>
+                    <div class="project__card">
+                        <h3>Нефтегазовые месторождения</h3>
+                        <p>Комплектация производственных площадок</p>
+                        <button class="btn btn-details" 
+                                data-title="Нефтегазовые месторождения">
+                            Подробнее
+                        </button>
+                    </div>
+                    <div class="project__card">
+                        <h3>Фиджитал-спорт</h3>
+                        <p>Создание центров подготовки киберспортсменов</p>
+                        <button class="btn btn-details" 
+                                data-title="Фиджитал-спорт">
+                            Подробнее
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="catalog section" id="catalog">
+        <div class="container">
+            <h2 class="section__title">Каталог продукции</h2>
+            <div class="catalog__grid">
+                <div class="catalog__item">
+                    <div class="item__image" id="item__image1"></div>
+                    <div class="catalog__content">
+                        <h3 class="catalog__title">3D комплексы</h3>
+                        <p class="catalog__desc">Мобильные мультимедийные комплексы с 3D-стереовизуализацией для образовательных учреждений</p>
+                    </div>
+                </div>
+
+                <div class="catalog__item">
+                    <div class="item__image" id="item__image2"></div>
+                    <div class="catalog__content">
+                        <h3 class="catalog__title">VR оборудование</h3>
+                        <p class="catalog__desc">Комплекты виртуальной реальности для обучения и профессиональной ориентации</p>
+                    </div>
+                </div>
+
+                <div class="catalog__item">
+                    <div class="item__image" id="item__image3"></div>
+                    <div class="catalog__content">
+                        <h3 class="catalog__title">Робототехника</h3>
+                        <p class="catalog__desc">Отечественные образовательные наборы для изучения робототехники</p>
+                    </div>
+                </div>
+
+                <div class="catalog__item">
+                    <div class="item__image" id="item__image4"></div>
+                    <div class="catalog__content">
+                        <h3 class="catalog__title">БПЛА</h3>
+                        <p class="catalog__desc">Комплексы для подготовки операторов беспилотных летательных аппаратов</p>
+                    </div>
+                </div>
+                
+                <div class="catalog__item">
+                    <div class="item__image" id="item__image5"></div>
+                    <div class="catalog__content">
+                        <h3 class="catalog__title">Цифровые лаборатории</h3>
+                        <p class="catalog__desc">Оборудование для проведения научных экспериментов и исследований</p>
+                    </div>
+                </div>
+                
+                <div class="catalog__item">
+                    <div class="item__image" id="item__image6"></div>
+                    <div class="catalog__content">
+                        <h3 class="catalog__title">Интерактивное оборудование</h3>
+                        <p class="catalog__desc">Сенсорные панели, столы и песочницы для образовательных учреждений</p>
+                    </div>
+                </div>
+                
+                <div class="catalog__item">
+                    <div class="item__image" id="item__image7"></div>
+                    <div class="catalog__content">
+                        <h3 class="catalog__title">Фиджитал спорт</h3>
+                        <p class="catalog__desc">Оборудование для киберспортивных соревнований и тренировок</p>
+                    </div>
+                </div>
+                
+                <div class="catalog__item">
+                    <div class="item__image" id="item__image8"></div>
+                    <div class="catalog__content">
+                        <h3 class="catalog__title">Серверное оборудование</h3>
+                        <p class="catalog__desc">Высокопроизводительные серверы для образовательных учреждений</p>
+                    </div>
+                </div>
+                
+                <div class="catalog__item">
+                    <div class="item__image" id="item__image9"></div>
+                    <div class="catalog__content">
+                        <h3 class="catalog__title">Конструкторы</h3>
+                        <p class="catalog__desc">Развивающие конструкторы для детского творчества и инженерии</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </section>
+
+        <section id="geography" class="geography section">
+            <div class="container">
+                <h2 class="section__title">География поставок</h2>
+                <div class="geography__content">
+                    <div class="geography__text">
+                        <p>Мы осуществляем поставки по всей территории Российской Федерации, от Калининграда до Камчатки. Наши клиенты находятся в более чем 30 городах России!</p>
+                    </div>
+                    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A56fe5c881c4e655a6cf1a1783aaed6a48451b20226c8cc1f7049ce791971c197&amp;width=1150&amp;height=550&amp;lang=ru_RU&amp;scroll=false"></script>
+                    <div class="map-caption">
+                        <p>Интерактивная карта с городами, куда мы осуществляем поставки</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="partners" class="partners section">
+            <div class="container">
+                <h2 class="section__title">Наши партнеры</h2>
+                <div class="partners__grid">
+                    <div class="partner__logo">Логотип 1</div>
+                    <div class="partner__logo">Логотип 2</div>
+                    <div class="partner__logo">Логотип 3</div>
+                    <div class="partner__logo">Логотип 4</div>
+                    <div class="partner__logo">Лoгoтип 5</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="social" class="social section">
+            <div class="container">
+                <h2 class="section__title">Социальная ответственность</h2>
+                <div class="social__content">
+                    <p class="social__intro">Кроме своей профессиональной деятельности ООО Компания «Юником» оказывает поддержку спортивным объединениям, в том числе Федерации Фиджитал-спорта и Федерации стрельбы из лука. Также коллектив Компании участвует в сборе и оказании гуманитарной помощи.</p>
+                    
+                    <div class="timeline">
+                        <div class="timeline__track">
+                            <div class="timeline__item">
+                                <div class="timeline__image" style="background-image: url('images/photo4.jpg')"></div>
+                                <div class="timeline__text">
+                                    <h3>Поддержка Федерации Фиджитал-спорта</h3>
+                                    <p>Спонсорская помощь в организации турниров и приобретении оборудования</p>
+                                </div>
+                            </div>
+                            
+                            <div class="timeline__item">
+                                <div class="timeline__image" style="background-image: url('images/photo5.jpg')"></div>
+                                <div class="timeline__text">
+                                    <h3>Федерация стрельбы из лука</h3>
+                                    <p>Поддержка детской секции и участие в региональных соревнованиях</p>
+                                </div>
+                            </div>
+                            
+                            <div class="timeline__item">
+                                <div class="timeline__image" style="background-image: url('images/photo3.jpg')"></div>
+                                <div class="timeline__text">
+                                    <h3>Гуманитарная помощь</h3>
+                                    <p>Участие сотрудников в сборе и доставке гуманитарных грузов</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="social__controls">
+                        <button class="social__nav social__nav--prev">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </button>
+                        <div class="social__dots"></div>
+                        <button class="social__nav social__nav--next">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9 6L15 12L9 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacts" class="contacts section">
+            <div class="container">
+                <h2 class="section__title">Контакты</h2>
+                <div class="contacts__content">
+                    <div class="contacts__info">
+                        <h2>Есть вопрос или проект для обсуждения?</h3>
+                        <p id="write-us">Напишите нам — будем рады помочь!</p>
+                        <h3>ООО Компания "ЮНИКОМ"</h3>
+                        <p><strong>Адрес:</strong> г. Сургут, ул. Маяковского 57, 4 корпус, оф. 496</p>
+                        <p><strong>Телефон:</strong> (3462) 609-700</p>
+                        <p><strong>Email:</strong> OOOKU86@yandex.ru</p>
+                    </div>
+                    <form class="contact__form">
+                        <h3>Сделать запрос</h3>
+                        <div class="form__group">
+                            <input type="text" placeholder="Ваше имя" required>
+                        </div>
+                        <div class="form__group">
+                            <input type="email" placeholder="Email" required>
+                        </div>
+                        <div class="form__group">
+                            <input type="tel" placeholder="Телефон">
+                        </div>
+                        <div class="form__group">
+                            <textarea placeholder="Ваш запрос" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Отправить</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__logo">
+                    <img src="images/logo.jpg" alt="ЮНИКОМ">
+                    <p>Вас с нами неминуемо ждет успех!</p>
+                </div>
+                <div class="footer__nav">
+                    <h4>Навигация</h4>
+                    <ul>
+                        <li><a href="#about">О компании</a></li>
+                        <li><a href="#clients">Заказчики</a></li>
+                        <li><a href="#projects">Проекты</a></li>
+                        <li><a href="#catalog">Каталог</a></li>
+                        <li><a href="#contacts">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer__contacts">
+                    <h4>Контакты</h4>
+                    <p>г. Сургут, ул. Маяковского 57,<br>4 корпус, оф. 496</p>
+                    <p>Тел.: (3462) 609-700</p>
+                    <p>Email: OOOKU86@yandex.ru</p>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2025 ООО "ЮНИКОМ". Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal" id="projectModal">
+        <div class="modal__content">
+            <button class="modal__close">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </button>
+            <div class="modal__inner">
+                <h3 class="modal__title"></h3>
+                <div class="modal__description"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>
