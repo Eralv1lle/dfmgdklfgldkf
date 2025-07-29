@@ -1,0 +1,461 @@
+.geography__content {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.btn {
+    white-space: nowrap; /* Запрещаем перенос текста */
+    min-width: 120px; /* Минимальная ширина */
+    text-align: center;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+/* Кнопка "Подробнее" */
+.btn-details {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 24px;
+}
+
+/* Кнопка "Сделать запрос" в форме */
+.contact__form .btn[type="submit"] {
+    width: auto;
+    margin: 0 auto;
+    display: inline-block;
+}
+
+@media (max-width: 1600px) {
+    .geography iframe {
+        height: 500px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .hero__title {
+        font-size: 42px;
+    }
+    
+    .client__content {
+        gap: 30px;
+    }
+
+    .geography iframe {
+        height: 450px;
+    }
+}
+
+@media (max-width: 1100px) {
+    .nav__list {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .nav__list li {
+        margin: 0 10px 5px 10px;
+    }
+}
+
+@media (max-width: 992px) {
+    .nav__list {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .nav__list li {
+        margin: 0 10px 5px 10px;
+    }
+    
+    .hero__title {
+        font-size: 36px;
+    }
+    
+    .hero__subtitle {
+        font-size: 18px;
+    }
+    
+    .section {
+        padding: 60px 0;
+    }
+    
+    .section__title {
+        font-size: 32px;
+        margin-bottom: 40px;
+    }
+    
+    .stats {
+        flex-wrap: wrap;
+    }
+    
+    .stat__item {
+        flex: 0 0 50%;
+        margin-bottom: 20px;
+    }
+    
+    .geography__content {
+        flex-direction: column;
+    }
+
+    .geography iframe {
+        height: 400px;
+    }
+    
+    .map-caption {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .geography__content img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .catalog__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .timeline__image {
+        height: 240px;
+    }
+    .timeline {
+        max-width: 500px;
+    }
+}
+
+@media (max-width: 768px) {
+    :root {
+        --header-height: 60px;
+    }
+
+    .header__inner {
+        padding: 15px 0;
+    }
+    
+    .logo img {
+        height: 40px;
+    }
+    
+    .nav {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background-color: var(--light);
+        transition: all 0.3s;
+        z-index: 999;
+        overflow-y: auto;
+    }
+    
+    .nav.active {
+        left: 0;
+    }
+    
+    .nav__list {
+        flex-direction: column;
+        padding: 20px;
+    }
+    
+    .nav__list li {
+        margin: 0 0 15px 0;
+    }
+    
+    .burger {
+        display: block;
+    }
+    
+    .burger.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+    
+    .burger.active span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .burger.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
+    }
+    
+    .hero {
+        height: auto;
+        min-height: 100vh;
+        padding: 120px 0 80px;
+    }
+    
+    .client__content,
+    .contacts__content {
+        flex-direction: column;
+    }
+    
+    .client__image {
+        order: -1;
+        margin-bottom: 30px;
+    }
+    
+    .projects__grid,
+    .catalog__grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer__content {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .geography__content {
+        flex-direction: column;
+    }
+
+    .geography iframe {
+        height: 350px;
+        border-radius: 8px;
+    }
+    
+    .geography__text {
+        padding: 0 15px;
+    }
+
+    .geography__content img {
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto 30px;
+    }
+
+    .timeline__image {
+        height: 200px;
+    }
+    
+    .timeline__text {
+        padding: 15px;
+        margin-top: -30px;
+    }
+    
+    .timeline__text h3 {
+        font-size: 18px;
+    }
+    
+    .social__controls {
+        gap: 20px;
+        margin-top: 25px;
+    }
+
+    .timeline {
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero__title {
+        font-size: 28px;
+    }
+    
+    .hero__subtitle {
+        font-size: 16px;
+    }
+    
+    .section {
+        padding: 50px 0;
+    }
+    
+    .section__title {
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+    
+    .stat__item {
+        flex: 0 0 100%;
+    }
+
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .tabs {
+        flex-direction: column;
+    }
+    
+    .tab__btn {
+        width: 100%;
+        text-align: left;
+        padding: 10px 15px;
+    }
+    
+    .timeline__image {
+        height: 180px;
+    }
+    
+    .timeline__text {
+        max-width: 95%;
+        padding: 12px;
+    }
+    
+    .social__nav {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .social__intro {
+        font-size: 16px;
+        margin-bottom: 30px;
+    }
+    
+    .contact__form {
+        padding: 20px;
+    }
+
+    .geography__content img {
+        max-width: 100%;
+    }
+
+    .geography iframe {
+        height: 300px;
+    }
+    
+    .geography__text p {
+        font-size: 15px;
+    }
+
+    .cities__list {
+        columns: 1;
+    }
+
+    .catalog__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 14px;
+        min-width: 110px;
+    }
+    
+    .btn-details {
+        padding: 10px 20px;
+    }
+    
+    .project__card .btn-details {
+        width: auto;
+        margin-top: 15px;
+    }
+
+}
+
+@media (max-width: 400px) {
+    .hero__title {
+        font-size: 24px;
+    }
+    
+    .btn {
+        padding: 8px 16px;
+        font-size: 13px;
+        min-width: 100px;
+    }
+    
+    .section__title {
+        font-size: 24px;
+    }
+
+    .geography iframe {
+        height: 250px;
+    }
+
+    .contact__form {
+        padding: 20px 15px;
+    }
+    
+    .contact__form h3 {
+        font-size: 18px;
+    }
+    
+    .form__group input, 
+    .form__group textarea {
+        padding: 10px 12px;
+    }
+}
+
+@media (max-width: 350px) {
+    .btn {
+        padding: 8px 12px;
+        font-size: 12px;
+        min-width: 90px;
+    }
+
+    .btn-details::after {
+        display: none; /* Убираем стрелку на совсем маленьких экранах */
+    }
+}
+
+.modal .btn-details {
+    width: auto;
+}
+
+@media (max-height: 500px) and (orientation: landscape) {
+    .hero {
+        min-height: auto;
+        padding: 80px 0 40px;
+    }
+    
+    .hero__content {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    
+    .header__inner {
+        padding: 10px 0;
+    }
+    
+    .logo img {
+        height: 30px;
+    }
+    
+    .nav.active {
+        top: 50px;
+        height: calc(100vh - 50px);
+    }
+
+    .geography iframe {
+        height: 250px;
+    }
+}
+
+/* Адаптация для очень высоких экранов */
+@media (min-height: 1200px) {
+    .hero {
+        min-height: 800px;
+    }
+    
+    .section {
+        padding: 120px 0;
+    }
+}
+
+/* Анимации для адаптации */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .section {
+        animation: fadeInUp 0.6s ease-out both;
+    }
+    
+    .section:nth-child(2) { animation-delay: 0.1s; }
+    .section:nth-child(3) { animation-delay: 0.2s; }
+    .section:nth-child(4) { animation-delay: 0.3s; }
+    .section:nth-child(5) { animation-delay: 0.4s; }
+    .section:nth-child(6) { animation-delay: 0.5s; }
+    .section:nth-child(7) { animation-delay: 0.6s; }
+    .section:nth-child(8) { animation-delay: 0.7s; }
+    .section:nth-child(8) { animation-delay: 0.8s; }
+}
