@@ -5,14 +5,13 @@
 }
 
 .btn {
-    white-space: nowrap; /* Запрещаем перенос текста */
-    min-width: 120px; /* Минимальная ширина */
+    white-space: nowrap;
+    min-width: 120px;
     text-align: center;
     transition: all 0.3s ease;
     box-sizing: border-box;
 }
 
-/* Кнопка "Подробнее" */
 .btn-details {
     position: relative;
     display: inline-flex;
@@ -21,7 +20,6 @@
     padding: 12px 24px;
 }
 
-/* Кнопка "Сделать запрос" в форме */
 .contact__form .btn[type="submit"] {
     width: auto;
     margin: 0 auto;
@@ -379,7 +377,7 @@
     }
 
     .btn-details::after {
-        display: none; /* Убираем стрелку на совсем маленьких экранах */
+        display: none;
     }
 }
 
@@ -411,14 +409,12 @@
     }
 }
 
-/* Адаптация для очень высоких экранов */
 @media (min-height: 1200px) {    
     .section {
         padding: 120px 0;
     }
 }
 
-/* Анимации для адаптации */
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -430,17 +426,8 @@
     }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-    .section {
-        animation: fadeInUp 0.6s ease-out both;
-    }
-    
-    .section:nth-child(2) { animation-delay: 0.1s; }
-    .section:nth-child(3) { animation-delay: 0.2s; }
-    .section:nth-child(4) { animation-delay: 0.3s; }
-    .section:nth-child(5) { animation-delay: 0.4s; }
-    .section:nth-child(6) { animation-delay: 0.5s; }
-    .section:nth-child(7) { animation-delay: 0.6s; }
-    .section:nth-child(8) { animation-delay: 0.7s; }
-    .section:nth-child(8) { animation-delay: 0.8s; }
+@media (hover: none) {
+  .modal__content {
+    transition: none !important;
+  }
 }
