@@ -86,100 +86,89 @@ document.querySelector('.contact__form').addEventListener('submit', async (e) =>
     });
 });
 
-document.addEventListener('DOMContentLoaded', function() {
-    const modal = document.getElementById('projectModal');
-    const modalTitle = modal.querySelector('.modal__title');
-    const modalDesc = modal.querySelector('.modal__description');
-    const closeBtn = modal.querySelector('.modal__close');
 
-    document.querySelectorAll('.btn-details').forEach(btn => {
-        btn.addEventListener('click', function() {
-        const title = this.dataset.title
-        modalTitle.textContent = title;
+function getModalContent(title) {
+    let description = '';
 
-        let description = '';
-
-        switch(title) {
-            case 'Комплектация образовательных учреждений':
-                description = `
-                    <p>ООО Компания «Юником» осуществляет комплектацию образовательных учреждений современным оборудованием:</p>
-                    <ul>
-                        <li>Мобильные мультимедийные комплексы с 3D-стереовизуализацией</li>
-                        <li>VR-оборудование для обучения и профессиональной ориентации</li>
-                        <li>Отечественные образовательные наборы по робототехнике</li>
-                        <li>Комплексы для подготовки операторов БПЛА</li>
-                    </ul>
-                    <p>Пример реализованного проекта: поставка мобильных мультимедийных комплексов с 3D-стереовизуализацией «Свега» для образовательного учреждения "Классная школа" в г. Муравленко.</p>
-                `;
-                break;
-                
-            case 'Спортивные объекты':
-                description = `
-                    <p>Комплектация спортивных объектов оборудованием для фиджитал-спорта:</p>
-                    <ul>
-                        <li>Игровые приставки с предустановленными аккаунтами и играми</li>
-                        <li>Игровые компьютеры, мониторы, кресла и столы</li>
-                        <li>Оборудование для соревнований по управлению дронами</li>
-                        <li>Видеостудии под ключ</li>
-                    </ul>
-                    <p>Пример проекта: комплектация центра подготовки по фиджитал спорту в направлениях: Фиджитал-футбол, Фиджитал-баскетбол, Фиджитал-хоккей на базе АУ Ханты-Мансийского автономного округа - Югры «ЮграМегаСпорт», г. Ханты-Мансийск. </p>
-                `;
-                break;
-                
-            case 'Нефтегазовые месторождения':
-                description = `
-                    <p>ООО Компания «Юником» осуществляет поставки оборудования для нефтегазодобывающих предприятий:</p>
-                    <ul>
-                        <li>Абразивы и аудиовизуальное оборудование</li>
-                        <li>Вентиляционное оборудование и материалы</li>
-                        <li>Грузоподъемное и газопламенное оборудование</li>
-                        <li>Запорно-регулирующая арматура</li>
-                        <li>Измерительное оборудование и инженерная сантехника</li>
-                    </ul>
-                `;
-                break;
-                
-            case 'Фиджитал-спорт':
-                description = `
-                    <p>Комплектация центров фиджитал-спорта:</p>
-                    <ul>
-                        <li>VR-арены и трассы для гоночных дронов</li>
-                        <li>Комплекты виртуальной реальности</li>
-                        <li>Оборудование для киберспортивных соревнований</li>
-                        <li>Стрим-станции и оборудование для трансляций</li>
-                    </ul>
-                    <p>Пример проекта: оснащение трёх кабинетов для подготовки киберспортсменов по дисциплинам фиджитал-спорт на базе МАУ "Пуровская районная спортивная школа олимпийского резерва "АВАНГАРД" в г. Тарко-Сале.</p>
-                `;
-                break;
-            }
-
-        modalDesc.innerHTML = description;
-        
-        modal.classList.add('active');
-        document.body.style.overflow = 'hidden';
-        });
-    });
-    
-    function closeModal() {
-        modal.classList.add('closing');
-        setTimeout(() => {
-        modal.classList.remove('active', 'closing');
-        document.body.style.overflow = 'auto';
-        document.body.style.paddingRight = '0';
-        }, 400);
-    }
-    
-    closeBtn.addEventListener('click', closeModal);
-    
-    modal.addEventListener('click', function(e) {
-        if (e.target === modal) closeModal();
-    });
-    
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape' && modal.classList.contains('active')) {
-        closeModal();
+    switch(title) {
+        case 'Комплектация образовательных учреждений':
+            description = `
+                <p>ООО Компания «Юником» осуществляет комплектацию образовательных учреждений современным оборудованием:</p>
+                <ul>
+                    <li>Мобильные мультимедийные комплексы с 3D-стереовизуализацией</li>
+                    <li>VR-оборудование для обучения и профессиональной ориентации</li>
+                    <li>Отечественные образовательные наборы по робототехнике</li>
+                    <li>Комплексы для подготовки операторов БПЛА</li>
+                </ul>
+                <p>Пример реализованного проекта: поставка мобильных мультимедийных комплексов с 3D-стереовизуализацией «Свега» для образовательного учреждения "Классная школа" в г. Муравленко.</p>
+            `;
+            break;
+            
+        case 'Спортивные объекты':
+            description = `
+                <p>Комплектация спортивных объектов оборудованием для фиджитал-спорта:</p>
+                <ul>
+                    <li>Игровые приставки с предустановленными аккаунтами и играми</li>
+                    <li>Игровые компьютеры, мониторы, кресла и столы</li>
+                    <li>Оборудование для соревнований по управлению дронами</li>
+                    <li>Видеостудии под ключ</li>
+                </ul>
+                <p>Пример проекта: комплектация центра подготовки по фиджитал спорту в направлениях: Фиджитал-футбол, Фиджитал-баскетбол, Фиджитал-хоккей на базе АУ Ханты-Мансийского автономного округа - Югры «ЮграМегаСпорт», г. Ханты-Мансийск. </p>
+            `;
+            break;
+            
+        case 'Нефтегазовые месторождения':
+            description = `
+                <p>ООО Компания «Юником» осуществляет поставки оборудования для нефтегазодобывающих предприятий:</p>
+                <ul>
+                    <li>Абразивы и аудиовизуальное оборудование</li>
+                    <li>Вентиляционное оборудование и материалы</li>
+                    <li>Грузоподъемное и газопламенное оборудование</li>
+                    <li>Запорно-регулирующая арматура</li>
+                    <li>Измерительное оборудование и инженерная сантехника</li>
+                </ul>
+            `;
+            break;
+            
+        case 'Фиджитал-спорт':
+            description = `
+                <p>Комплектация центров фиджитал-спорта:</p>
+                <ul>
+                    <li>VR-арены и трассы для гоночных дронов</li>
+                    <li>Комплекты виртуальной реальности</li>
+                    <li>Оборудование для киберспортивных соревнований</li>
+                    <li>Стрим-станции и оборудование для трансляций</li>
+                </ul>
+                <p>Пример проекта: оснащение трёх кабинетов для подготовки киберспортсменов по дисциплинам фиджитал-спорт на базе МАУ "Пуровская районная спортивная школа олимпийского резерва "АВАНГАРД" в г. Тарко-Сале.</p>
+            `;
+            break;
         }
-    });
+
+        return description;
+}
+
+document.querySelectorAll('.btn-details').forEach(btn => {
+  btn.addEventListener('click', function() {
+    const modal = document.getElementById('projectModal');
+    const title = this.dataset.title;
+    
+    // Предварительная подготовка контента
+    modal.querySelector('.modal__title').textContent = title;
+    modal.querySelector('.modal__description').innerHTML = getModalContent(title);
+    
+    // Показываем модалку
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+    
+    // Форсируем рефлоу перед анимацией
+    void modal.offsetHeight;
+  });
+});
+
+document.querySelector('.modal__close').addEventListener('click', function() {
+  const modal = document.getElementById('projectModal');
+  modal.classList.remove('active');
+  document.body.style.overflow = 'auto';
 });
 
 document.querySelectorAll('.catalog__item').forEach(item => {
