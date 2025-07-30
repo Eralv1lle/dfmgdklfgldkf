@@ -86,6 +86,11 @@ document.querySelector('.contact__form').addEventListener('submit', async (e) =>
     });
 });
 
+if ('connection' in navigator) {
+  if (navigator.connection.saveData || navigator.connection.effectiveType === 'slow-2g') {
+    document.documentElement.classList.add('low-performance');
+  }
+}
 
 function getModalContent(title) {
     let description = '';
@@ -152,15 +157,12 @@ document.querySelectorAll('.btn-details').forEach(btn => {
     const modal = document.getElementById('projectModal');
     const title = this.dataset.title;
     
-    // Предварительная подготовка контента
     modal.querySelector('.modal__title').textContent = title;
     modal.querySelector('.modal__description').innerHTML = getModalContent(title);
     
-    // Показываем модалку
     modal.classList.add('active');
     document.body.style.overflow = 'hidden';
     
-    // Форсируем рефлоу перед анимацией
     void modal.offsetHeight;
   });
 });
