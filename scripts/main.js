@@ -157,7 +157,6 @@ document.addEventListener('DOMContentLoaded', function() {
         
         modal.classList.add('active');
         document.body.style.overflow = 'hidden';
-        document.body.style.paddingRight = window.innerWidth - document.documentElement.clientWidth + 'px';
         });
     });
     
