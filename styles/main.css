@@ -164,14 +164,13 @@ body {
 
 .hero {
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/bg.jpg') no-repeat center center/cover;
-    height: calc(100vh - var(--header-height));
-    min-height: calc(100vh - var(--header-height));
+    height: 100vh;
+    min-height: 100vh;
     margin-top: 0;
     color: var(--light);
     display: flex;
     align-items: center;
     text-align: center;
-    margin-top: 80px;
 }
 
 .hero .btn {
