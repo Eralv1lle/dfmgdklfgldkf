@@ -179,10 +179,6 @@
         transform: rotate(-45deg) translate(7px, -6px);
     }
     
-    .hero {
-        padding: 120px 0 80px;
-    }
-    
     .client__content,
     .contacts__content {
         flex-direction: column;
@@ -392,11 +388,6 @@
 }
 
 @media (max-height: 500px) and (orientation: landscape) {
-    .hero {
-        min-height: auto;
-        padding: 80px 0 40px;
-    }
-    
     .hero__content {
         padding-top: 40px;
         padding-bottom: 40px;
@@ -421,11 +412,7 @@
 }
 
 /* Адаптация для очень высоких экранов */
-@media (min-height: 1200px) {
-    .hero {
-        min-height: 800px;
-    }
-    
+@media (min-height: 1200px) {    
     .section {
         padding: 120px 0;
     }
